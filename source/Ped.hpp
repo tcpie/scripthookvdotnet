@@ -421,6 +421,11 @@ namespace GTA
 		{
 			void set(float value);
 		}
+		property int MaxHealth
+		{
+			int get();
+			void set(int value);
+		}
 		property int Money
 		{
 			int get();

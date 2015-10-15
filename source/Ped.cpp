@@ -50,6 +50,14 @@ namespace GTA
 	{
 		return _euphoria;
 	}
+	int Ped::MaxHealth::get()
+	{
+		return Native::Function::Call<int>(Native::Hash::GET_PED_MAX_HEALTH, Handle) - 100;
+	}
+	void Ped::MaxHealth::set(int value)
+	{
+		Native::Function::Call(Native::Hash::SET_PED_MAX_HEALTH, Handle, value + 100);
+	}
 	int Ped::Money::get()
 	{
 		return Native::Function::Call<int>(Native::Hash::GET_PED_MONEY, Handle);
